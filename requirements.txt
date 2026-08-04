@@ -1,0 +1,12 @@
+torch
+transformers
+datasets
+accelerate
+evaluate
+
+# NOTE: seqeval is the standard NER evaluation library, but its installer
+# fails on some newer Python versions (setuptools_scm/vcs_versioning build
+# error). We implement the same span-based precision/recall/F1 metric
+# ourselves in evaluation/span_metrics.py, unit-tested against hand-verified
+# cases in evaluation/test_span_metrics.py -- no seqeval dependency needed.
+# If seqeval installs fine in your environment, feel free to swap it in.
